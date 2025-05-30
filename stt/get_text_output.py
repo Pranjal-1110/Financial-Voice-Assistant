@@ -1,7 +1,7 @@
 import os
 import json
 from groq import Groq
-from python_dotenv import load_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -15,7 +15,7 @@ def text_output(file_path: str) -> str:
         raise FileNotFoundError(f"The file {file_path} does not exist.")
     
     with open(file_path , 'rb') as file:
-        transcription = client.audio.transcription.create(
+        transcription = client.audio.transcriptions.create(
             file = file,
             model = "distil-whisper-large-v3-en",
             language = "en",

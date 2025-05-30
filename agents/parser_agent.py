@@ -32,11 +32,15 @@ def get_parsed_output(query: str) -> parsed_output:
         query (str): The user query to be parsed.
         
     Returns:
-        Parsed_Output: A structured output containing parsed information.
+        parsed_output: A structured output containing parsed information.
     """
     
     chain = prompt_template | structured_llm
     result = chain.invoke({"query": query})
+    
+    if isinstance(result, dict):
+        result = parsed_output(**result)
+        
     return result
     
     

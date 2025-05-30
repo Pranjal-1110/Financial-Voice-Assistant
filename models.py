@@ -23,9 +23,3 @@ class parsed_output(BaseModel):
     confidence: Optional[float] = Field(None, description="LLM’s confidence in parsing the query")
     
     
-
-class company_results_schema(self):
-    def __init__(self)
-
-class API_Results(BaseModel):
-    
