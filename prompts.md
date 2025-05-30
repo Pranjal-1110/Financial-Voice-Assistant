@@ -1,8 +1,10 @@
 # Documenting the Prompts
 ## Prompt ID: 001
-<b>Intent:</b> Generate synthetic data about stocks under management of the manager
-<b>Model Used:</b> gpt-3.5-turbo
-<b>Prompt:</b>
+### Intent: 
+Generate synthetic data about stocks under management of the manager
+### Model Used: 
+Claude Sonnet 4
+### Prompt:
 regions = {
     "Asia": 
     "Europe": 
@@ -46,4 +48,5 @@ You can either calculate/fetch the remaining fields, or generate them. But follo
 
 REMEMBER TO CREATE A DATABASE OF REAL COMPANIES.
 
-<b>Output:</b> Generated the synthetic database, regarding the portfolio.
+### Output:
+ Generated the synthetic database, regarding the portfolio.
